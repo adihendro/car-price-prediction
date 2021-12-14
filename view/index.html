@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prediction</title>
-    <link rel="stylesheet" href="css/index.css" />
-    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="../view/css/index.css" />
+    <!-- <script defer src="../view/js/index.js"></script> -->
 </head>
 
 <body>
@@ -18,19 +18,17 @@
             </h1>
         </div>
 
-        <form class="preferences">
+        <form class="preferences" action="/predict" method="POST">
             <div class="preferences-content">
                 <div>
                     <div class="selection-title">Harga Modal</div>
-                    <input type="number" class="selection" id="harga" required></input>
+                    <input type="number" class="selection" name="harga" id="harga" required></input>
                 </div>
             </div>
-        </form>
-
-        <button type="submit" id="button-find" class="button button-primary">
+            <button type="submit" id="button-find" class="button button-primary">
             Submit price
-        </button>
-
+            </button>
+        </form>
     </div>
 </body>
 
