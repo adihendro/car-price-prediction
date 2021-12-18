@@ -18,13 +18,21 @@
             </h1>
         </div>
 
-        <div class="subtitle">Results</div>
+        <h5 class="subtitle">Results</h5>
 
         <div class="result">
-            <div id="result1">Profit</div>
-            <p>{{ profit }}</p>
-            <div id="result1">Harga Jual</div>
-            <p>{{ sell }}</p>
+            <div>
+                <b>Harga Modal:</b> 
+                Rp<span id="modal">{{ modal }}</span>
+            </div>
+            <div>
+                <b>Profit:</b> 
+                Rp<span id="result1">{{ profit }}</span>
+            </div>
+            <div>
+                <b>Harga Jual: </b> 
+                Rp<span id="result2">{{ sell }} </span>
+            </div>
         </div>
 
     </div>

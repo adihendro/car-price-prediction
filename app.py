@@ -33,7 +33,12 @@ def predict():
     y_pred2 = scale_y.inverse_transform([y_pred])
     harga_jual = int(y_pred2[0][0])
 
-    return flask.render_template('result.html', profit='{}'.format(harga_jual), sell='{}'.format(harga_jual+int_features))
+    return flask.render_template(
+        'result.html', 
+        modal='{}'.format(int_features),
+        profit='{}'.format(harga_jual), 
+        sell='{}'.format(harga_jual+int_features)
+    )
 
 
 @app.route("/view/css/<path:path>")
