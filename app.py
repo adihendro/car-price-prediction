@@ -10,7 +10,8 @@ model = pickle.load(open("model/model.pkl", 'rb'))
 scale_x = pickle.load(open('model/scaler_x.pkl', 'rb'))
 scale_y = pickle.load(open('model/scaler_y.pkl', 'rb'))
 
-app = flask.Flask(__name__, template_folder='view', static_url_path="", static_folder="view")
+app = flask.Flask(__name__, template_folder='view',
+                  static_url_path="", static_folder="view")
 
 
 @app.route('/')
@@ -32,11 +33,13 @@ def predict():
     y_pred2 = scale_y.inverse_transform([y_pred])
     harga_jual = int(y_pred2[0][0])
 
-    return flask.render_template('result.html', prediction_text='{}'.format(harga_jual))
+    return flask.render_template('result.html', profit='{}'.format(harga_jual), sell='{}'.format(harga_jual+int_features))
+
 
 @app.route("/view/css/<path:path>")
 def send_css(path):
     return send_from_directory('view/css', path)
+
 
 @app.route("/view/js/<path:path>")
 def send_js(path):
