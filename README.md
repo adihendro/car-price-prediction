@@ -1,4 +1,11 @@
 # Car Price Prediction
+__Kelompok 07__
+* Hardy Valenthio Amansyah (18218004)
+* Adi Hendro (18218009)
+* Kanisius Sosrodimardito (18218044)
+* Iman-Budi Pranakasih (10118004)
+
+---
 
 ## Permasalahan
 ### 01. Deskripsi Organisasi / Perusahaan
